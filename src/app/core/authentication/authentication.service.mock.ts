@@ -1,6 +1,6 @@
 import { Observable, of } from 'rxjs';
 
-import { LoginContext } from './authentication.service';
+import { LoginContext, SignUpContext, RenewPasswordContext } from './authentication.service';
 import { Credentials } from './credentials.service';
 
 export class MockAuthenticationService {
@@ -14,6 +14,14 @@ export class MockAuthenticationService {
       username: context.username,
       token: '123456'
     });
+  }
+
+  signUp(context: SignUpContext): Observable<boolean> {
+    return of(true);
+  }
+
+  renewPassword(context: RenewPasswordContext): Observable<boolean> {
+    return of(true);
   }
 
   logout(): Observable<boolean> {

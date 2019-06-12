@@ -9,6 +9,16 @@ export interface LoginContext {
   remember?: boolean;
 }
 
+export interface SignUpContext {
+  email: string;
+  username: string;
+  password: string;
+}
+
+export interface RenewPasswordContext {
+  username: string;
+}
+
 /**
  * Provides a base for authentication workflow.
  * The login/logout methods should be replaced with proper implementation.
@@ -30,6 +40,26 @@ export class AuthenticationService {
     };
     this.credentialsService.setCredentials(data, context.remember);
     return of(data);
+  }
+
+  /**
+   * Sign up the user.
+   * @param context The user sign up parameters.
+   * @returns The sign up status
+   */
+  signUp(context: SignUpContext): Observable<boolean> {
+    // Replace by proper sign up call
+    return of(true);
+  }
+
+  /**
+   * Renew password of the user.
+   * @param context The user sign up parameters.
+   * @returns The sign up status
+   */
+  renewPassword(context: RenewPasswordContext): Observable<boolean> {
+    // Replace by proper renew password call
+    return of(true);
   }
 
   /**

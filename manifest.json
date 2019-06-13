@@ -3,8 +3,8 @@
   "short_name": "planarlens",
   "theme_color": "#488aff",
   "background_color": "#488aff",
-  "scope": "/",
-  "start_url": "/",
+  "scope": "/planarlens/",
+  "start_url": "/planarlens/",
   "display": "standalone",
   "icons": [
     {

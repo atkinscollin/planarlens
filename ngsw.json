@@ -1,21 +1,21 @@
 {
   "configVersion": 1,
-  "timestamp": 1560456812602,
-  "index": "https://atkinscollin.github.io/planarlens/index.html",
+  "timestamp": 1560459587722,
+  "index": "https://atkinscollin.github.io/index.html",
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "https://atkinscollin.github.io/planarlens/4.e71d879b26643e32d01d.js",
-        "https://atkinscollin.github.io/planarlens/favicon.ico",
-        "https://atkinscollin.github.io/planarlens/index.html",
-        "https://atkinscollin.github.io/planarlens/main.132884d126bf78c65753.js",
-        "https://atkinscollin.github.io/planarlens/manifest.json",
-        "https://atkinscollin.github.io/planarlens/polyfills.c897fd9ff58135e762ea.js",
-        "https://atkinscollin.github.io/planarlens/runtime.2082221ad7caea40ec2b.js",
-        "https://atkinscollin.github.io/planarlens/styles.fac9904a7c7719235216.css"
+        "https://atkinscollin.github.io/4.e71d879b26643e32d01d.js",
+        "https://atkinscollin.github.io/favicon.ico",
+        "https://atkinscollin.github.io/index.html",
+        "https://atkinscollin.github.io/main.132884d126bf78c65753.js",
+        "https://atkinscollin.github.io/manifest.json",
+        "https://atkinscollin.github.io/polyfills.c897fd9ff58135e762ea.js",
+        "https://atkinscollin.github.io/runtime.2082221ad7caea40ec2b.js",
+        "https://atkinscollin.github.io/styles.fac9904a7c7719235216.css"
       ],
       "patterns": []
     },
@@ -24,32 +24,32 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
-        "https://atkinscollin.github.io/planarlens/MaterialIcons-Regular.586090b38a233ce0201f.ttf",
-        "https://atkinscollin.github.io/planarlens/MaterialIcons-Regular.9219a80f0478e0bfdee5.woff",
-        "https://atkinscollin.github.io/planarlens/MaterialIcons-Regular.b661c28b0f28606a9672.eot",
-        "https://atkinscollin.github.io/planarlens/MaterialIcons-Regular.bca3a1873ac988faff08.woff2",
-        "https://atkinscollin.github.io/planarlens/assets/ngx-rocket-logo.png",
-        "https://atkinscollin.github.io/planarlens/assets/ngx-rocket-logo@192.png"
+        "https://atkinscollin.github.io/MaterialIcons-Regular.586090b38a233ce0201f.ttf",
+        "https://atkinscollin.github.io/MaterialIcons-Regular.9219a80f0478e0bfdee5.woff",
+        "https://atkinscollin.github.io/MaterialIcons-Regular.b661c28b0f28606a9672.eot",
+        "https://atkinscollin.github.io/MaterialIcons-Regular.bca3a1873ac988faff08.woff2",
+        "https://atkinscollin.github.io/assets/ngx-rocket-logo.png",
+        "https://atkinscollin.github.io/assets/ngx-rocket-logo@192.png"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "https://atkinscollin.github.io/planarlens/4.e71d879b26643e32d01d.js": "ec3024dc0c0a987892220b85a9a70f879efe3d0e",
-    "https://atkinscollin.github.io/planarlens/MaterialIcons-Regular.586090b38a233ce0201f.ttf": "f28a6dc90c580c0731b480870ac464f7efbb371c",
-    "https://atkinscollin.github.io/planarlens/MaterialIcons-Regular.9219a80f0478e0bfdee5.woff": "961be32ccfaf5d6ab034c2a317d5c6dbcd7740d9",
-    "https://atkinscollin.github.io/planarlens/MaterialIcons-Regular.b661c28b0f28606a9672.eot": "550418c2934a2289bccd3cdf5df5459fa6f830a5",
-    "https://atkinscollin.github.io/planarlens/MaterialIcons-Regular.bca3a1873ac988faff08.woff2": "9b824f4d8e852dbaec8c4c20b02b7dba4757b4ce",
-    "https://atkinscollin.github.io/planarlens/assets/ngx-rocket-logo.png": "0ac53fd27406fe5a36e68285315fb0012e54058e",
-    "https://atkinscollin.github.io/planarlens/assets/ngx-rocket-logo@192.png": "461b730f9c6dc818f8af9acbe62dfde24dc02d7a",
-    "https://atkinscollin.github.io/planarlens/favicon.ico": "b65083d46bbf63692d5d2cdd69622e6d7ecae317",
-    "https://atkinscollin.github.io/planarlens/index.html": "ad9d7e324d1bf0a8c08e28484054651901798b80",
-    "https://atkinscollin.github.io/planarlens/main.132884d126bf78c65753.js": "993693556a492edef656845be52e7a2779916feb",
-    "https://atkinscollin.github.io/planarlens/manifest.json": "6f1276f566fe88c5032bb1017782cdbdcf893e35",
-    "https://atkinscollin.github.io/planarlens/polyfills.c897fd9ff58135e762ea.js": "6946e10a03311677a01490b8e91741668e64e17e",
-    "https://atkinscollin.github.io/planarlens/runtime.2082221ad7caea40ec2b.js": "5411712b0203bfd8085238b4a98d1af7c12a5c00",
-    "https://atkinscollin.github.io/planarlens/styles.fac9904a7c7719235216.css": "6a90207139bc1060e09aeea565eed98d34b040d9"
+    "https://atkinscollin.github.io/4.e71d879b26643e32d01d.js": "ec3024dc0c0a987892220b85a9a70f879efe3d0e",
+    "https://atkinscollin.github.io/MaterialIcons-Regular.586090b38a233ce0201f.ttf": "f28a6dc90c580c0731b480870ac464f7efbb371c",
+    "https://atkinscollin.github.io/MaterialIcons-Regular.9219a80f0478e0bfdee5.woff": "961be32ccfaf5d6ab034c2a317d5c6dbcd7740d9",
+    "https://atkinscollin.github.io/MaterialIcons-Regular.b661c28b0f28606a9672.eot": "550418c2934a2289bccd3cdf5df5459fa6f830a5",
+    "https://atkinscollin.github.io/MaterialIcons-Regular.bca3a1873ac988faff08.woff2": "9b824f4d8e852dbaec8c4c20b02b7dba4757b4ce",
+    "https://atkinscollin.github.io/assets/ngx-rocket-logo.png": "0ac53fd27406fe5a36e68285315fb0012e54058e",
+    "https://atkinscollin.github.io/assets/ngx-rocket-logo@192.png": "461b730f9c6dc818f8af9acbe62dfde24dc02d7a",
+    "https://atkinscollin.github.io/favicon.ico": "b65083d46bbf63692d5d2cdd69622e6d7ecae317",
+    "https://atkinscollin.github.io/index.html": "a9af73dcbe93cf4d480c43d0d98f5417a3001017",
+    "https://atkinscollin.github.io/main.132884d126bf78c65753.js": "993693556a492edef656845be52e7a2779916feb",
+    "https://atkinscollin.github.io/manifest.json": "6f1276f566fe88c5032bb1017782cdbdcf893e35",
+    "https://atkinscollin.github.io/polyfills.c897fd9ff58135e762ea.js": "6946e10a03311677a01490b8e91741668e64e17e",
+    "https://atkinscollin.github.io/runtime.2082221ad7caea40ec2b.js": "5411712b0203bfd8085238b4a98d1af7c12a5c00",
+    "https://atkinscollin.github.io/styles.fac9904a7c7719235216.css": "6a90207139bc1060e09aeea565eed98d34b040d9"
   },
   "navigationUrls": [
     {

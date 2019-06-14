@@ -14,14 +14,9 @@ describe('LostPasswordComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule,
-        ReactiveFormsModule,
-        CoreModule
-      ],
-      declarations: [ LostPasswordComponent ]
-    })
-    .compileComponents();
+      imports: [RouterTestingModule, ReactiveFormsModule, CoreModule],
+      declarations: [LostPasswordComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

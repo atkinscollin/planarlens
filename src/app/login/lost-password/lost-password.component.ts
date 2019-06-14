@@ -12,33 +12,39 @@ const log = new Logger('LostPassword');
   styleUrls: ['./lost-password.component.scss']
 })
 export class LostPasswordComponent implements OnInit {
-
   error: string;
   lostPasswordForm: FormGroup;
   isLoading = false;
 
-  constructor (private authenticationService: AuthenticationService,
+  constructor(
+    private authenticationService: AuthenticationService,
     private formBuilder: FormBuilder,
-    private router: Router) {
+    private router: Router
+  ) {
     this.createForm();
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   renewPassword() {
     this.isLoading = true;
-    this.authenticationService.renewPassword(this.lostPasswordForm.value)
-      .pipe(finalize(() => {
-        this.isLoading = false;
-      }))
-      .subscribe(() => {
-        log.debug(`Password renewed!`);
-        this.router.navigate(['/'], { replaceUrl: true });
-      }, (error) => {
-        log.debug(`Password renew failed with error: ${error}`);
-        this.error = error;
-      });
+    this.authenticationService
+      .renewPassword(this.lostPasswordForm.value)
+      .pipe(
+        finalize(() => {
+          this.isLoading = false;
+        })
+      )
+      .subscribe(
+        () => {
+          log.debug(`Password renewed!`);
+          this.router.navigate(['/'], { replaceUrl: true });
+        },
+        error => {
+          log.debug(`Password renew failed with error: ${error}`);
+          this.error = error;
+        }
+      );
   }
 
   private createForm() {
@@ -46,5 +52,4 @@ export class LostPasswordComponent implements OnInit {
       username: ['', Validators.required]
     });
   }
-
 }

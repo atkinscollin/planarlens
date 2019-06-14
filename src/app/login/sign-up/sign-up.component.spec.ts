@@ -14,14 +14,9 @@ describe('SignUpComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule,
-        ReactiveFormsModule,
-        CoreModule
-      ],
-      declarations: [ SignUpComponent ]
-    })
-    .compileComponents();
+      imports: [RouterTestingModule, ReactiveFormsModule, CoreModule],
+      declarations: [SignUpComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

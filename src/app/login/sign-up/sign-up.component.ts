@@ -13,44 +13,52 @@ const log = new Logger('SignUp');
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit {
-
   error: string;
   signUpForm: FormGroup;
   isLoading = false;
 
-  constructor (private authenticationService: AuthenticationService,
+  constructor(
+    private authenticationService: AuthenticationService,
     private formBuilder: FormBuilder,
-    private router: Router) {
+    private router: Router
+  ) {
     this.createForm();
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   signUp() {
     this.isLoading = true;
-    this.authenticationService.signUp(this.signUpForm.value)
-      .pipe(finalize(() => {
-        this.isLoading = false;
-      }))
-      .subscribe(() => {
-        log.debug(`Sign up successful!`);
-        this.router.navigate(['/'], { replaceUrl: true });
-      }, (error) => {
-        log.debug(`Sign up error: ${error}`);
-        this.error = error;
-      });
+    this.authenticationService
+      .signUp(this.signUpForm.value)
+      .pipe(
+        finalize(() => {
+          this.isLoading = false;
+        })
+      )
+      .subscribe(
+        () => {
+          log.debug(`Sign up successful!`);
+          this.router.navigate(['/'], { replaceUrl: true });
+        },
+        error => {
+          log.debug(`Sign up error: ${error}`);
+          this.error = error;
+        }
+      );
   }
 
   private createForm() {
-    this.signUpForm = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
-      username: ['', Validators.required],
-      password: ['', [Validators.required, Validators.minLength(10)]],
-      confirmPassword: ['', Validators.required]
-    }, {
+    this.signUpForm = this.formBuilder.group(
+      {
+        email: ['', [Validators.required, Validators.email]],
+        username: ['', Validators.required],
+        password: ['', [Validators.required, Validators.minLength(10)]],
+        confirmPassword: ['', Validators.required]
+      },
+      {
         validator: MatchingValidator('password', 'confirmPassword')
-      });
+      }
+    );
   }
-
 }

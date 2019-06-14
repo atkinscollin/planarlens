@@ -26,8 +26,14 @@
             </mat-error>
           </mat-form-field>
           <mat-form-field>
-            <input type="password" matInput formControlName="password" [placeholder]="'Password' | translate" required
-              minlength="10" />
+            <input
+              type="password"
+              matInput
+              formControlName="password"
+              [placeholder]="'Password' | translate"
+              required
+              minlength="10"
+            />
             <mat-error *ngIf="signUpForm.get('password').hasError('required')">
               <span translate>Password is required</span>
             </mat-error>
@@ -36,8 +42,13 @@
             </mat-error>
           </mat-form-field>
           <mat-form-field>
-            <input type="password" matInput formControlName="confirmPassword"
-              [placeholder]="'Confirm password' | translate" required />
+            <input
+              type="password"
+              matInput
+              formControlName="confirmPassword"
+              [placeholder]="'Confirm password' | translate"
+              required
+            />
             <mat-error *ngIf="signUpForm.get('confirmPassword').hasError('required')">
               <span translate>Password confirmation is required</span>
             </mat-error>

@@ -21,10 +21,6 @@ import { LostPasswordComponent } from './lost-password/lost-password.component';
     MaterialModule,
     LoginRoutingModule
   ],
-  declarations: [
-    LoginComponent,
-    SignUpComponent,
-    LostPasswordComponent
-  ]
+  declarations: [LoginComponent, SignUpComponent, LostPasswordComponent]
 })
 export class LoginModule {}

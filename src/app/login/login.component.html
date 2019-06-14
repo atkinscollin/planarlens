@@ -24,15 +24,27 @@
         <br />
         <div fxLayout="column">
           <mat-form-field>
-            <input type="text" matInput formControlName="username" autocomplete="username"
-              [placeholder]="'Username' | translate" required />
+            <input
+              type="text"
+              matInput
+              formControlName="username"
+              autocomplete="username"
+              [placeholder]="'Username' | translate"
+              required
+            />
             <mat-error *ngIf="loginForm.get('username').hasError('required')">
               <span translate>Username is required</span>
             </mat-error>
           </mat-form-field>
           <mat-form-field>
-            <input type="password" matInput formControlName="password" autocomplete="current-password"
-              [placeholder]="'Password' | translate" required />
+            <input
+              type="password"
+              matInput
+              formControlName="password"
+              autocomplete="current-password"
+              [placeholder]="'Password' | translate"
+              required
+            />
             <mat-error *ngIf="loginForm.get('password').hasError('required')">
               <span translate>Password is required</span>
             </mat-error>

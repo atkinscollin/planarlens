@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1560528430608,
+  "timestamp": 1560533980265,
   "index": "https://atkinscollin.github.io/planarlens/index.html",
   "assetGroups": [
     {
@@ -46,7 +46,7 @@
     "https://atkinscollin.github.io/planarlens/favicon.ico": "b65083d46bbf63692d5d2cdd69622e6d7ecae317",
     "https://atkinscollin.github.io/planarlens/index.html": "ad9d7e324d1bf0a8c08e28484054651901798b80",
     "https://atkinscollin.github.io/planarlens/main.132884d126bf78c65753.js": "993693556a492edef656845be52e7a2779916feb",
-    "https://atkinscollin.github.io/planarlens/manifest.json": "6f1276f566fe88c5032bb1017782cdbdcf893e35",
+    "https://atkinscollin.github.io/planarlens/manifest.json": "88dc97c6a662eed663a81b9f6dd3f034ab93a2ca",
     "https://atkinscollin.github.io/planarlens/polyfills.c897fd9ff58135e762ea.js": "6946e10a03311677a01490b8e91741668e64e17e",
     "https://atkinscollin.github.io/planarlens/runtime.2082221ad7caea40ec2b.js": "5411712b0203bfd8085238b4a98d1af7c12a5c00",
     "https://atkinscollin.github.io/planarlens/styles.fac9904a7c7719235216.css": "6a90207139bc1060e09aeea565eed98d34b040d9"

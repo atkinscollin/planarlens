@@ -60,12 +60,25 @@
                 </div>
             </form>
             <br />
-            <button mat-raised-button color="primary" routerLink="/sign-up">
-                <span translate>Create an account</span>
-            </button>
-            <button mat-raised-button color="primary" routerLink="/lost-password">
-                <span translate>Lost password?</span>
-            </button>
+            <mat-divider></mat-divider>
+            <br />
+            <div fxLayout="column">
+                <span
+                    >Don't have an account yet?
+                    <button mat-stroked-button color="primary" routerLink="/sign-up">
+                        <span translate>Sign Up</span>
+                    </button>
+                </span>
+            </div>
+            <br />
+            <div fxLayout="column">
+                <span
+                    >Having trouble loggin in?
+                    <button mat-stroked-button color="primary" routerLink="/reset-password">
+                        <span translate>Reset password</span>
+                    </button>
+                </span>
+            </div>
         </mat-card>
     </div>
 </div>

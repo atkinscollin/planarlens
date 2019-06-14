@@ -18,10 +18,9 @@ const routes: Routes = [
             canActivate: [UnauthGuard]
         },
         {
-            path: 'lost-password',
+            path: 'reset-password',
             component: LostPasswordComponent,
-            data: { title: extract('Lost password') },
-            canActivate: [AuthenticationGuard]
+            data: { title: extract('Reset password') }
         }
     ])
 ];

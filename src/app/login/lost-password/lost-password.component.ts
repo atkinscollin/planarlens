@@ -37,11 +37,11 @@ export class LostPasswordComponent implements OnInit {
             )
             .subscribe(
                 () => {
-                    log.debug(`Password renewed!`);
+                    log.debug(`Password reset`);
                     this.router.navigate(['/'], { replaceUrl: true });
                 },
                 error => {
-                    log.debug(`Password renew failed with error: ${error}`);
+                    log.debug(`Password reset failed with error: ${error}`);
                     this.error = error;
                 }
             );

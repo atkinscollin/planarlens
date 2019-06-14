@@ -9,23 +9,23 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { CoreModule } from '@app/core';
 
 describe('LostPasswordComponent', () => {
-  let component: LostPasswordComponent;
-  let fixture: ComponentFixture<LostPasswordComponent>;
+    let component: LostPasswordComponent;
+    let fixture: ComponentFixture<LostPasswordComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [RouterTestingModule, ReactiveFormsModule, CoreModule],
-      declarations: [LostPasswordComponent]
-    }).compileComponents();
-  }));
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            imports: [RouterTestingModule, ReactiveFormsModule, CoreModule],
+            declarations: [LostPasswordComponent]
+        }).compileComponents();
+    }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(LostPasswordComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    beforeEach(() => {
+        fixture = TestBed.createComponent(LostPasswordComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });

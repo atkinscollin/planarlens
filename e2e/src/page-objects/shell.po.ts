@@ -6,11 +6,11 @@
 import { browser, element, by } from 'protractor';
 
 export class ShellPage {
-  welcomeText = element(by.css('app-root mat-card-title'));
+    welcomeText = element(by.css('app-root mat-card-title'));
 
-  constructor() {}
+    constructor() {}
 
-  async getParagraphText() {
-    return await this.welcomeText.getText();
-  }
+    async getParagraphText() {
+        return await this.welcomeText.getText();
+    }
 }

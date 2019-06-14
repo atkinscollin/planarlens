@@ -17,23 +17,23 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    ServiceWorkerModule.register('./ngsw-worker.js', { enabled: environment.production }),
-    FormsModule,
-    HttpClientModule,
-    TranslateModule.forRoot(),
-    BrowserAnimationsModule,
-    MaterialModule,
-    CoreModule,
-    SharedModule,
-    ShellModule,
-    HomeModule,
-    LoginModule,
-    AppRoutingModule // must be imported as the last module as it contains the fallback route
-  ],
-  declarations: [AppComponent],
-  providers: [],
-  bootstrap: [AppComponent]
+    imports: [
+        BrowserModule,
+        ServiceWorkerModule.register('./ngsw-worker.js', { enabled: environment.production }),
+        FormsModule,
+        HttpClientModule,
+        TranslateModule.forRoot(),
+        BrowserAnimationsModule,
+        MaterialModule,
+        CoreModule,
+        SharedModule,
+        ShellModule,
+        HomeModule,
+        LoginModule,
+        AppRoutingModule // must be imported as the last module as it contains the fallback route
+    ],
+    declarations: [AppComponent],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -7,49 +7,49 @@ import { finalize } from 'rxjs/operators';
 const log = new Logger('LostPassword');
 
 @Component({
-  selector: 'app-lost-password',
-  templateUrl: './lost-password.component.html',
-  styleUrls: ['./lost-password.component.scss']
+    selector: 'app-lost-password',
+    templateUrl: './lost-password.component.html',
+    styleUrls: ['./lost-password.component.scss']
 })
 export class LostPasswordComponent implements OnInit {
-  error: string;
-  lostPasswordForm: FormGroup;
-  isLoading = false;
+    error: string;
+    lostPasswordForm: FormGroup;
+    isLoading = false;
 
-  constructor(
-    private authenticationService: AuthenticationService,
-    private formBuilder: FormBuilder,
-    private router: Router
-  ) {
-    this.createForm();
-  }
+    constructor(
+        private authenticationService: AuthenticationService,
+        private formBuilder: FormBuilder,
+        private router: Router
+    ) {
+        this.createForm();
+    }
 
-  ngOnInit() {}
+    ngOnInit() {}
 
-  renewPassword() {
-    this.isLoading = true;
-    this.authenticationService
-      .renewPassword(this.lostPasswordForm.value)
-      .pipe(
-        finalize(() => {
-          this.isLoading = false;
-        })
-      )
-      .subscribe(
-        () => {
-          log.debug(`Password renewed!`);
-          this.router.navigate(['/'], { replaceUrl: true });
-        },
-        error => {
-          log.debug(`Password renew failed with error: ${error}`);
-          this.error = error;
-        }
-      );
-  }
+    renewPassword() {
+        this.isLoading = true;
+        this.authenticationService
+            .renewPassword(this.lostPasswordForm.value)
+            .pipe(
+                finalize(() => {
+                    this.isLoading = false;
+                })
+            )
+            .subscribe(
+                () => {
+                    log.debug(`Password renewed!`);
+                    this.router.navigate(['/'], { replaceUrl: true });
+                },
+                error => {
+                    log.debug(`Password renew failed with error: ${error}`);
+                    this.error = error;
+                }
+            );
+    }
 
-  private createForm() {
-    this.lostPasswordForm = this.formBuilder.group({
-      username: ['', Validators.required]
-    });
-  }
+    private createForm() {
+        this.lostPasswordForm = this.formBuilder.group({
+            username: ['', Validators.required]
+        });
+    }
 }

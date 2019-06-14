@@ -12,9 +12,9 @@ import { AppModule } from '@app/app.module';
 import { environment } from '@env/environment';
 
 if (environment.production) {
-  enableProdMode();
+    enableProdMode();
 }
 
 platformBrowserDynamic()
-  .bootstrapModule(AppModule, { preserveWhitespaces: true })
-  .catch(err => console.log(err));
+    .bootstrapModule(AppModule, { preserveWhitespaces: true })
+    .catch(err => console.log(err));

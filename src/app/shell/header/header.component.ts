@@ -6,45 +6,45 @@ import { MatSidenav } from '@angular/material';
 import { AuthenticationService, CredentialsService, I18nService } from '@app/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @Input() sidenav!: MatSidenav;
+    @Input() sidenav!: MatSidenav;
 
-  constructor(
-    private router: Router,
-    private titleService: Title,
-    private authenticationService: AuthenticationService,
-    private credentialsService: CredentialsService,
-    private i18nService: I18nService
-  ) {}
+    constructor(
+        private router: Router,
+        private titleService: Title,
+        private authenticationService: AuthenticationService,
+        private credentialsService: CredentialsService,
+        private i18nService: I18nService
+    ) {}
 
-  ngOnInit() {}
+    ngOnInit() {}
 
-  setLanguage(language: string) {
-    this.i18nService.language = language;
-  }
+    setLanguage(language: string) {
+        this.i18nService.language = language;
+    }
 
-  logout() {
-    this.authenticationService.logout().subscribe(() => this.router.navigate(['/login'], { replaceUrl: true }));
-  }
+    logout() {
+        this.authenticationService.logout().subscribe(() => this.router.navigate(['/login'], { replaceUrl: true }));
+    }
 
-  get currentLanguage(): string {
-    return this.i18nService.language;
-  }
+    get currentLanguage(): string {
+        return this.i18nService.language;
+    }
 
-  get languages(): string[] {
-    return this.i18nService.supportedLanguages;
-  }
+    get languages(): string[] {
+        return this.i18nService.supportedLanguages;
+    }
 
-  get username(): string {
-    const credentials = this.credentialsService.credentials;
-    return credentials ? credentials.username : null;
-  }
+    get username(): string {
+        const credentials = this.credentialsService.credentials;
+        return credentials ? credentials.username : null;
+    }
 
-  get title(): string {
-    return this.titleService.getTitle();
-  }
+    get title(): string {
+        return this.titleService.getTitle();
+    }
 }

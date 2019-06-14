@@ -9,21 +9,26 @@ import { Shell } from '@app/shell/shell.service';
 import { UnauthGuard } from '@app/core/authentication/unauth.guard';
 
 const routes: Routes = [
-  Shell.childRoutes([
-    { path: 'login', component: LoginComponent, data: { title: extract('Login') }, canActivate: [UnauthGuard] },
-    { path: 'sign-up', component: SignUpComponent, data: { title: extract('Sign up') }, canActivate: [UnauthGuard] },
-    {
-      path: 'lost-password',
-      component: LostPasswordComponent,
-      data: { title: extract('Lost password') },
-      canActivate: [AuthenticationGuard]
-    }
-  ])
+    Shell.childRoutes([
+        { path: 'login', component: LoginComponent, data: { title: extract('Login') }, canActivate: [UnauthGuard] },
+        {
+            path: 'sign-up',
+            component: SignUpComponent,
+            data: { title: extract('Sign up') },
+            canActivate: [UnauthGuard]
+        },
+        {
+            path: 'lost-password',
+            component: LostPasswordComponent,
+            data: { title: extract('Lost password') },
+            canActivate: [AuthenticationGuard]
+        }
+    ])
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
-  providers: []
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule],
+    providers: []
 })
 export class LoginRoutingModule {}

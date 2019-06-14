@@ -12,15 +12,15 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { LostPasswordComponent } from './lost-password/lost-password.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    TranslateModule,
-    SharedModule,
-    FlexLayoutModule,
-    MaterialModule,
-    LoginRoutingModule
-  ],
-  declarations: [LoginComponent, SignUpComponent, LostPasswordComponent]
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        TranslateModule,
+        SharedModule,
+        FlexLayoutModule,
+        MaterialModule,
+        LoginRoutingModule
+    ],
+    declarations: [LoginComponent, SignUpComponent, LostPasswordComponent]
 })
 export class LoginModule {}

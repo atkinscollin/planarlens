@@ -32,7 +32,6 @@ src/                         project source code
 |- assets/                   app assets (images, fonts, sounds...)
 |- environments/             values for various build environments
 |- theme/                    app global scss variables and theme
-|- translations/             translations files
 |- index.html                html entry point
 |- main.scss                 global style entry point
 |- main.ts                   app entry point
@@ -46,18 +45,17 @@ proxy.conf.js                backend proxy configuration
 
 Task automation is based on [NPM scripts](https://docs.npmjs.com/misc/scripts).
 
-Task                            | Description
---------------------------------|--------------------------------------------------------------------------------------
-`npm start`                     | Run development server on `http://localhost:4200/`
-`npm run serve:sw`              | Run test server on `http://localhost:4200/` with service worker enabled
-`npm run build [-- --configuration=production]` | Lint code and build web app for production (with [AOT](https://angular.io/guide/aot-compiler)) in `dist/` folder
-`npm test`                      | Run unit tests via [Karma](https://karma-runner.github.io) in watch mode
-`npm run test:ci`               | Lint code and run unit tests once for continuous integration
-`npm run e2e`                   | Run e2e tests using [Protractor](http://www.protractortest.org)
-`npm run lint`                  | Lint code
-`npm run translations:extract`  | Extract strings from code and templates to `src/app/translations/template.json`
-`npm run docs`                  | Display project documentation and coding guides
-`npm run prettier`              | Automatically format all `.ts`, `.js` & `.scss` files
+| Task                                            | Description                                                                                                      |
+| ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `npm start`                                     | Run development server on `http://localhost:4200/`                                                               |
+| `npm run serve:sw`                              | Run test server on `http://localhost:4200/` with service worker enabled                                          |
+| `npm run build [-- --configuration=production]` | Lint code and build web app for production (with [AOT](https://angular.io/guide/aot-compiler)) in `dist/` folder |
+| `npm test`                                      | Run unit tests via [Karma](https://karma-runner.github.io) in watch mode                                         |
+| `npm run test:ci`                               | Lint code and run unit tests once for continuous integration                                                     |
+| `npm run e2e`                                   | Run e2e tests using [Protractor](http://www.protractortest.org)                                                  |
+| `npm run lint`                                  | Lint code                                                                                                        |
+| `npm run docs`                                  | Display project documentation and coding guides                                                                  |
+| `npm run prettier`                              | Automatically format all `.ts`, `.js` & `.scss` files                                                            |
 
 When building the application, you can specify the target configuration using the additional flag
 `--configuration <name>` (do not forget to prepend `--` to pass arguments to npm scripts).
@@ -96,7 +94,7 @@ You can also force code formatting by running the command `npm run prettier`.
 # What's in the box
 
 The app template is based on [HTML5](http://whatwg.org/html), [TypeScript](http://www.typescriptlang.org) and
-[Sass](http://sass-lang.com). The translation files use the common [JSON](http://www.json.org) format.
+[Sass](http://sass-lang.com).
 
 #### Tools
 
@@ -122,7 +120,6 @@ Development, build and quality processes are based on [angular-cli](https://gith
 - [Angular Flex Layout](https://github.com/angular/flex-layout)
 - [Material Icons](https://material.io/icons/)
 - [RxJS](http://reactivex.io/rxjs)
-- [ngx-translate](https://github.com/ngx-translate/core)
 
 #### Coding guides
 
@@ -135,7 +132,6 @@ Development, build and quality processes are based on [angular-cli](https://gith
 
 #### Other documentation
 
-- [I18n guide](docs/i18n.md)
 - [Working behind a corporate proxy](docs/corporate-proxy.md)
 - [Updating dependencies and tools](docs/updating.md)
 - [Using a backend proxy for development](docs/backend-proxy.md)

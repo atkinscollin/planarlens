@@ -1,6 +1,5 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { TranslateModule } from '@ngx-translate/core';
 
 import { CoreModule } from '@app/core';
 import { AppComponent } from './app.component';
@@ -8,7 +7,7 @@ import { AppComponent } from './app.component';
 describe('AppComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            imports: [RouterTestingModule, TranslateModule.forRoot(), CoreModule],
+            imports: [RouterTestingModule, CoreModule],
             declarations: [AppComponent],
             providers: []
         }).compileComponents();

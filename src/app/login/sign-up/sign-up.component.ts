@@ -13,7 +13,6 @@ const log = new Logger('SignUp');
     styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit {
-    error: string;
     signUpForm: FormGroup;
     isLoading = false;
 
@@ -43,7 +42,6 @@ export class SignUpComponent implements OnInit {
                 },
                 error => {
                     log.debug(`Sign up error: ${error}`);
-                    this.error = error;
                 }
             );
     }

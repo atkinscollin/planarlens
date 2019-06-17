@@ -1,58 +1,58 @@
-<div fxFill fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1.5rem" class="mat-typography">
-    <div>
-        <h1 fxLayoutAlign="center">Sign Up</h1>
-    </div>
-    <div class="sign-up-container" fxLayout="row" fxLayoutAlign="center">
-        <mat-card fxFlex="90%" fxFlex.sm="66%" fxFlex.md="50%" fxFlex.gt-md="33%" class="sign-up-box">
-            <form (ngSubmit)="signUp()" [formGroup]="signUpForm" novalidate>
-                <div class="sign-up-error" [hidden]="!error || isLoading">
-                    Username or password incorrect.
-                </div>
+<div class="sign-up-container mat-typography" fxLayout="row" fxLayoutAlign="center">
+    <mat-card fxFlex="90%" fxFlex.sm="66%" fxFlex.md="50%" fxFlex.gt-md="33%" class="sign-up-box">
+        <form (ngSubmit)="signUp()" [formGroup]="signUpForm" novalidate>
+            <div fxLayout="column">
+                <mat-form-field>
+                    <input type="email" matInput formControlName="email" placeholder="Email" required />
+                    <mat-error *ngIf="signUpForm.get('email').hasError('required')">
+                        <span>Email is required</span>
+                    </mat-error>
+                    <mat-error *ngIf="signUpForm.get('email').hasError('email')">
+                        <span>Not a valid email</span>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="text" matInput formControlName="username" placeholder="Username" required />
+                    <mat-error *ngIf="signUpForm.get('username').hasError('required')">
+                        <span>Username is required</span>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="password" matInput formControlName="password" placeholder="Password" required
+                        minlength="10" />
+                    <mat-error *ngIf="signUpForm.get('password').hasError('required')">
+                        <span>Password is required</span>
+                    </mat-error>
+                    <mat-error *ngIf="signUpForm.get('password').hasError('minlength')">
+                        <span>Password must be at least 10 characters long</span>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="password" matInput formControlName="confirmPassword" placeholder="Confirm password"
+                        required />
+                    <mat-error *ngIf="signUpForm.get('confirmPassword').hasError('required')">
+                        <span>Confirmation is required</span>
+                    </mat-error>
+                    <mat-error *ngIf="signUpForm.get('confirmPassword').hasError('matching')">
+                        <span>Confirmation does not match</span>
+                    </mat-error>
+                </mat-form-field>
                 <br />
-                <div fxLayout="column">
-                    <mat-form-field>
-                        <input type="email" matInput formControlName="email" placeholder="Email" required />
-                        <mat-error *ngIf="signUpForm.get('email').hasError('required')">
-                            <span>Email is required</span>
-                        </mat-error>
-                        <mat-error *ngIf="signUpForm.get('email').hasError('email')">
-                            <span>Not a valid email</span>
-                        </mat-error>
-                    </mat-form-field>
-                    <mat-form-field>
-                        <input type="text" matInput formControlName="username" placeholder="Username" required />
-                        <mat-error *ngIf="signUpForm.get('username').hasError('required')">
-                            <span>Username is required</span>
-                        </mat-error>
-                    </mat-form-field>
-                    <mat-form-field>
-                        <input type="password" matInput formControlName="password" placeholder="Password" required
-                            minlength="10" />
-                        <mat-error *ngIf="signUpForm.get('password').hasError('required')">
-                            <span>Password is required</span>
-                        </mat-error>
-                        <mat-error *ngIf="signUpForm.get('password').hasError('minlength')">
-                            <span>Password must be at least 10 characters long</span>
-                        </mat-error>
-                    </mat-form-field>
-                    <mat-form-field>
-                        <input type="password" matInput formControlName="confirmPassword" placeholder="Confirm password"
-                            required />
-                        <mat-error *ngIf="signUpForm.get('confirmPassword').hasError('required')">
-                            <span>Password confirmation is required</span>
-                        </mat-error>
-                        <mat-error *ngIf="signUpForm.get('confirmPassword').hasError('matching')">
-                            <span>Confirmation does not match</span>
-                        </mat-error>
-                    </mat-form-field>
-                    <br />
-                    <button mat-raised-button color="primary" type="submit"
-                        [disabled]="signUpForm.invalid || isLoading">
-                        <app-loader class="inline-loader" [isLoading]="isLoading"></app-loader>
-                        <span>Sign Up</span>
-                    </button>
-                </div>
-            </form>
-        </mat-card>
-    </div>
+                <button mat-raised-button color="primary" type="submit" [disabled]="signUpForm.invalid || isLoading">
+                    <app-loader class="inline-loader" [isLoading]="isLoading"></app-loader>
+                    <span>Sign Up</span>
+                </button>
+            </div>
+        </form>
+        <br />
+        <mat-divider></mat-divider>
+        <br />
+        <div fxLayout="column">
+            <span>Already have an account?
+                <button mat-stroked-button color="primary" routerLink="/login">
+                    <span>Login</span>
+                </button>
+            </span>
+        </div>
+    </mat-card>
 </div>

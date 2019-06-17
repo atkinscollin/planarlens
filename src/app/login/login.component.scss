@@ -10,13 +10,13 @@
     display: inline-block;
 }
 
-.version {
-    margin: 0;
-}
-
 .login-container,
 .mat-form-field {
     width: 100%;
+}
+
+.login-container {
+    margin: 1.5rem 0;
 }
 
 .login-error {

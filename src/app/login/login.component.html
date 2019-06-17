@@ -1,59 +1,51 @@
-<div fxFill fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1.5rem" class="mat-typography">
-    <div>
-        <h1 fxLayoutAlign="center">APP_NAME</h1>
-        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="2rem">
-            <h4 class="version">v{{ version }}</h4>
-        </div>
-    </div>
-    <div class="login-container" fxLayout="row" fxLayoutAlign="center">
-        <mat-card fxFlex="90%" fxFlex.sm="66%" fxFlex.md="50%" fxFlex.gt-md="33%" class="login-box">
-            <form (ngSubmit)="login()" [formGroup]="loginForm" novalidate>
-                <div class="login-error" [hidden]="!error || isLoading">
-                    Username or password incorrect.
-                </div>
+<div class="login-container mat-typography" fxLayout="row" fxLayoutAlign="center">
+    <mat-card fxFlex="90%" fxFlex.sm="66%" fxFlex.md="50%" fxFlex.gt-md="33%" class="login-box">
+        <form (ngSubmit)="login()" [formGroup]="loginForm" novalidate>
+            <div class="login-error" [hidden]="!error || isLoading">
+                Username or password incorrect.
+            </div>
+            <br />
+            <div fxLayout="column">
+                <mat-form-field>
+                    <input type="text" matInput formControlName="username" autocomplete="username"
+                        placeholder="Username" required />
+                    <mat-error *ngIf="loginForm.get('username').hasError('required')">
+                        <span>Username is required</span>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="password" matInput formControlName="password" autocomplete="current-password"
+                        placeholder="Password" required />
+                    <mat-error *ngIf="loginForm.get('password').hasError('required')">
+                        <span>Password is required</span>
+                    </mat-error>
+                </mat-form-field>
+                <mat-slide-toggle color="primary" formControlName="remember">Remember me
+                </mat-slide-toggle>
                 <br />
-                <div fxLayout="column">
-                    <mat-form-field>
-                        <input type="text" matInput formControlName="username" autocomplete="username"
-                            placeholder="Username" required />
-                        <mat-error *ngIf="loginForm.get('username').hasError('required')">
-                            <span>Username is required</span>
-                        </mat-error>
-                    </mat-form-field>
-                    <mat-form-field>
-                        <input type="password" matInput formControlName="password" autocomplete="current-password"
-                            placeholder="Password" required />
-                        <mat-error *ngIf="loginForm.get('password').hasError('required')">
-                            <span>Password is required</span>
-                        </mat-error>
-                    </mat-form-field>
-                    <mat-slide-toggle color="primary" formControlName="remember">Remember me
-                    </mat-slide-toggle>
-                    <br />
-                    <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid || isLoading">
-                        <app-loader class="inline-loader" [isLoading]="isLoading"></app-loader>
-                        <span>Login</span>
-                    </button>
-                </div>
-            </form>
-            <br />
-            <mat-divider></mat-divider>
-            <br />
-            <div fxLayout="column">
-                <span>Don't have an account yet?
-                    <button mat-stroked-button color="primary" routerLink="/sign-up">
-                        <span>Sign Up</span>
-                    </button>
-                </span>
+                <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid || isLoading">
+                    <app-loader class="inline-loader" [isLoading]="isLoading"></app-loader>
+                    <span>Login</span>
+                </button>
             </div>
-            <br />
-            <div fxLayout="column">
-                <span>Having trouble loggin in?
-                    <button mat-stroked-button color="primary" routerLink="/reset-password">
-                        <span>Reset password</span>
-                    </button>
-                </span>
-            </div>
-        </mat-card>
-    </div>
+        </form>
+        <br />
+        <mat-divider></mat-divider>
+        <br />
+        <div fxLayout="column">
+            <span>Don't have an account yet?
+                <button mat-stroked-button color="primary" routerLink="/sign-up">
+                    <span>Sign Up</span>
+                </button>
+            </span>
+        </div>
+        <br />
+        <div fxLayout="column">
+            <span>Having trouble logging in?
+                <button mat-stroked-button color="primary" routerLink="/reset-password">
+                    <span>Reset password</span>
+                </button>
+            </span>
+        </div>
+    </mat-card>
 </div>

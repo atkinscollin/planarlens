@@ -24,34 +24,21 @@
                 <br />
                 <div fxLayout="column">
                     <mat-form-field>
-                        <input
-                            type="text"
-                            matInput
-                            formControlName="username"
-                            autocomplete="username"
-                            [placeholder]="'Username' | translate"
-                            required
-                        />
+                        <input type="text" matInput formControlName="username" autocomplete="username"
+                            [placeholder]="'Username' | translate" required />
                         <mat-error *ngIf="loginForm.get('username').hasError('required')">
                             <span translate>Username is required</span>
                         </mat-error>
                     </mat-form-field>
                     <mat-form-field>
-                        <input
-                            type="password"
-                            matInput
-                            formControlName="password"
-                            autocomplete="current-password"
-                            [placeholder]="'Password' | translate"
-                            required
-                        />
+                        <input type="password" matInput formControlName="password" autocomplete="current-password"
+                            [placeholder]="'Password' | translate" required />
                         <mat-error *ngIf="loginForm.get('password').hasError('required')">
                             <span translate>Password is required</span>
                         </mat-error>
                     </mat-form-field>
-                    <mat-slide-toggle color="primary" formControlName="remember" translate
-                        >Remember me</mat-slide-toggle
-                    >
+                    <mat-slide-toggle color="primary" formControlName="remember" translate>Remember me
+                    </mat-slide-toggle>
                     <br />
                     <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid || isLoading">
                         <app-loader class="inline-loader" [isLoading]="isLoading"></app-loader>
@@ -63,8 +50,7 @@
             <mat-divider></mat-divider>
             <br />
             <div fxLayout="column">
-                <span
-                    >Don't have an account yet?
+                <span>Don't have an account yet?
                     <button mat-stroked-button color="primary" routerLink="/sign-up">
                         <span translate>Sign Up</span>
                     </button>
@@ -72,8 +58,7 @@
             </div>
             <br />
             <div fxLayout="column">
-                <span
-                    >Having trouble loggin in?
+                <span>Having trouble loggin in?
                     <button mat-stroked-button color="primary" routerLink="/reset-password">
                         <span translate>Reset password</span>
                     </button>

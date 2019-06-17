@@ -11,13 +11,8 @@
                 <br />
                 <div fxLayout="column">
                     <mat-form-field>
-                        <input
-                            type="email"
-                            matInput
-                            formControlName="email"
-                            [placeholder]="'Email' | translate"
-                            required
-                        />
+                        <input type="email" matInput formControlName="email" [placeholder]="'Email' | translate"
+                            required />
                         <mat-error *ngIf="signUpForm.get('email').hasError('required')">
                             <span translate>Email is required</span>
                         </mat-error>
@@ -26,26 +21,15 @@
                         </mat-error>
                     </mat-form-field>
                     <mat-form-field>
-                        <input
-                            type="text"
-                            matInput
-                            formControlName="username"
-                            [placeholder]="'Username' | translate"
-                            required
-                        />
+                        <input type="text" matInput formControlName="username" [placeholder]="'Username' | translate"
+                            required />
                         <mat-error *ngIf="signUpForm.get('username').hasError('required')">
                             <span translate>Username is required</span>
                         </mat-error>
                     </mat-form-field>
                     <mat-form-field>
-                        <input
-                            type="password"
-                            matInput
-                            formControlName="password"
-                            [placeholder]="'Password' | translate"
-                            required
-                            minlength="10"
-                        />
+                        <input type="password" matInput formControlName="password"
+                            [placeholder]="'Password' | translate" required minlength="10" />
                         <mat-error *ngIf="signUpForm.get('password').hasError('required')">
                             <span translate>Password is required</span>
                         </mat-error>
@@ -54,13 +38,8 @@
                         </mat-error>
                     </mat-form-field>
                     <mat-form-field>
-                        <input
-                            type="password"
-                            matInput
-                            formControlName="confirmPassword"
-                            [placeholder]="'Confirm password' | translate"
-                            required
-                        />
+                        <input type="password" matInput formControlName="confirmPassword"
+                            [placeholder]="'Confirm password' | translate" required />
                         <mat-error *ngIf="signUpForm.get('confirmPassword').hasError('required')">
                             <span translate>Password confirmation is required</span>
                         </mat-error>
@@ -69,12 +48,8 @@
                         </mat-error>
                     </mat-form-field>
                     <br />
-                    <button
-                        mat-raised-button
-                        color="primary"
-                        type="submit"
-                        [disabled]="signUpForm.invalid || isLoading"
-                    >
+                    <button mat-raised-button color="primary" type="submit"
+                        [disabled]="signUpForm.invalid || isLoading">
                         <app-loader class="inline-loader" [isLoading]="isLoading"></app-loader>
                         <span translate>Sign Up</span>
                     </button>

@@ -1,0 +1,18 @@
+{
+  "editor.formatOnSave": true,
+  "prettier.disableLanguages": [
+    "html",
+    "json"
+  ],
+  "beautify.language": {
+    "js": [],
+    "css": [],
+    "html": [
+      "html"
+    ]
+  },
+  "beautify.ignore": [
+    "*.js, *.css, *.scss"
+  ],
+  "editor.formatOnPaste": true
+}

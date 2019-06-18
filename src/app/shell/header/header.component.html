@@ -1,32 +1,37 @@
 <mat-toolbar class="mat-elevation-z6 navbar" color="primary">
     <div fxHide.gt-sm fxLayoutAlign="start center">
-        <button class="menu-button" mat-icon-button (click)="sidenav.toggle()">
+        <button class="sidenav-button" mat-icon-button (click)="sidenav.toggle()">
             <mat-icon>menu</mat-icon>
         </button>
         <span class="title">{{ title }}</span>
     </div>
     <div fxHide.lt-md>
-        <a class="brand" href="https://github.com/ngx-rocket">APP_NAME</a>
-        <button mat-button routerLink="/home" routerLinkActive="active">
-            <mat-icon>home</mat-icon>
-            <span>Home</span>
-        </button>
-        <button mat-button routerLink="/about" routerLinkActive="active">
-            <mat-icon>info</mat-icon>
-            <span>About</span>
-        </button>
+        <a class="brand" routerLink="/">Planarlens</a>
     </div>
     <span fxFlex></span>
     <button mat-icon-button [matMenuTriggerFor]="userMenu">
         <mat-icon>person</mat-icon>
     </button>
     <mat-menu #userMenu="matMenu">
-        <mat-list>
-            <mat-list-item>
-                <span>Logged in as</span>&nbsp;<b>{{ username }}</b>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-        </mat-list>
-        <button mat-menu-item (click)="logout()">Logout</button>
+        <div *ngIf="isLoggedIn; then loggedInMenu else notLoggedInMenu"></div>
+        <ng-template #loggedInMenu>
+            <mat-list>
+                <mat-list-item>
+                    {{ username }}
+                </mat-list-item>
+                <mat-divider></mat-divider>
+            </mat-list>
+            <button mat-menu-item (click)="logout()">
+                <mat-icon>exit_to_app</mat-icon>Logout
+            </button>
+        </ng-template>
+        <ng-template #notLoggedInMenu>
+            <button mat-menu-item routerLink="/login" routerLinkActive="active">
+                <mat-icon>exit_to_app</mat-icon>Login
+            </button>
+            <button mat-menu-item routerLink="/sign-up" routerLinkActive="active">
+                <mat-icon>perm_identity</mat-icon>Sign Up
+            </button>
+        </ng-template>
     </mat-menu>
 </mat-toolbar>

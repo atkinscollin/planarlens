@@ -23,7 +23,7 @@ describe('AuthenticationService', () => {
         it('should return credentials', fakeAsync(() => {
             // Act
             const request = authenticationService.login({
-                username: 'toto',
+                email: 'testLogin@mail.com',
                 password: '123'
             });
             tick();
@@ -40,7 +40,7 @@ describe('AuthenticationService', () => {
 
             // Act
             const request = authenticationService.login({
-                username: 'toto',
+                email: 'testLogin@mail.com',
                 password: '123'
             });
             tick();
@@ -57,7 +57,7 @@ describe('AuthenticationService', () => {
         it('should persist credentials for the session', fakeAsync(() => {
             // Act
             const request = authenticationService.login({
-                username: 'toto',
+                email: 'testLogin@mail.com',
                 password: '123'
             });
             tick();
@@ -72,7 +72,7 @@ describe('AuthenticationService', () => {
         it('should persist credentials across sessions', fakeAsync(() => {
             // Act
             const request = authenticationService.login({
-                username: 'toto',
+                email: 'testLogin@mail.com',
                 password: '123',
                 remember: true
             });
@@ -90,8 +90,8 @@ describe('AuthenticationService', () => {
         it('should make proper sign up call and return result', fakeAsync(() => {
             // Arrange
             const signUpRequest = authenticationService.signUp({
-                email: 'total@mail.com',
-                username: 'toto',
+                email: 'testSignUp@mail.com',
+                username: 'testSignUpUsername',
                 password: '123'
             });
             tick();
@@ -107,7 +107,7 @@ describe('AuthenticationService', () => {
         it('should make proper sign up call and return result', fakeAsync(() => {
             // Arrange
             const renewPasswordRequest = authenticationService.renewPassword({
-                username: 'toto'
+                email: 'testRenewPassword@mail.com'
             });
             tick();
 
@@ -122,7 +122,7 @@ describe('AuthenticationService', () => {
         it('should clear user authentication', fakeAsync(() => {
             // Arrange
             const loginRequest = authenticationService.login({
-                username: 'toto',
+                email: 'testLogin@mail.com',
                 password: '123'
             });
             tick();

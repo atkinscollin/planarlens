@@ -4,7 +4,7 @@ import { AuthenticationService, Logger } from '@app/core';
 import { Router } from '@angular/router';
 import { finalize } from 'rxjs/operators';
 
-const log = new Logger('LostPassword');
+const log = new Logger('RenewPassword');
 
 @Component({
     selector: 'app-lost-password',
@@ -13,7 +13,7 @@ const log = new Logger('LostPassword');
 })
 export class LostPasswordComponent implements OnInit {
     error: string;
-    lostPasswordForm: FormGroup;
+    renewPasswordForm!: FormGroup;
     isLoading = false;
 
     constructor(
@@ -29,7 +29,7 @@ export class LostPasswordComponent implements OnInit {
     renewPassword() {
         this.isLoading = true;
         this.authenticationService
-            .renewPassword(this.lostPasswordForm.value)
+            .renewPassword(this.renewPasswordForm.value)
             .pipe(
                 finalize(() => {
                     this.isLoading = false;
@@ -48,8 +48,8 @@ export class LostPasswordComponent implements OnInit {
     }
 
     private createForm() {
-        this.lostPasswordForm = this.formBuilder.group({
-            username: ['', Validators.required]
+        this.renewPasswordForm = this.formBuilder.group({
+            email: ['', Validators.required]
         });
     }
 }

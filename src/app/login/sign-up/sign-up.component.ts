@@ -13,7 +13,7 @@ const log = new Logger('SignUp');
     styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit {
-    signUpForm: FormGroup;
+    signUpForm!: FormGroup;
     isLoading = false;
 
     constructor(
@@ -37,7 +37,7 @@ export class SignUpComponent implements OnInit {
             )
             .subscribe(
                 () => {
-                    log.debug(`Sign up successful!`);
+                    log.debug(`Sign up successful`);
                     this.router.navigate(['/'], { replaceUrl: true });
                 },
                 error => {

@@ -2,15 +2,15 @@
     <mat-card fxFlex="90%" fxFlex.sm="66%" fxFlex.md="50%" fxFlex.gt-md="33%" class="login-box">
         <form (ngSubmit)="login()" [formGroup]="loginForm" novalidate>
             <div class="login-error" [hidden]="!error || isLoading">
-                Username or password incorrect.
+                Email or password incorrect.
             </div>
             <br />
             <div fxLayout="column">
                 <mat-form-field>
-                    <input type="text" matInput formControlName="username" autocomplete="username"
-                        placeholder="Username" required />
-                    <mat-error *ngIf="loginForm.get('username').hasError('required')">
-                        <span>Username is required</span>
+                    <input type="email" matInput formControlName="email" autocomplete="username" placeholder="Email"
+                        required />
+                    <mat-error *ngIf="loginForm.get('email').hasError('required')">
+                        <span>Email is required</span>
                     </mat-error>
                 </mat-form-field>
                 <mat-form-field>

@@ -3,7 +3,8 @@
         <form (ngSubmit)="signUp()" [formGroup]="signUpForm" novalidate>
             <div fxLayout="column">
                 <mat-form-field>
-                    <input type="email" matInput formControlName="email" placeholder="Email" required />
+                    <input type="email" matInput formControlName="email" placeholder="Email" required
+                        autocomplete="username" />
                     <mat-error *ngIf="signUpForm.get('email').hasError('required')">
                         <span>Email is required</span>
                     </mat-error>
@@ -19,7 +20,7 @@
                 </mat-form-field>
                 <mat-form-field>
                     <input type="password" matInput formControlName="password" placeholder="Password" required
-                        minlength="10" />
+                        minlength="10" autocomplete="new-password" />
                     <mat-error *ngIf="signUpForm.get('password').hasError('required')">
                         <span>Password is required</span>
                     </mat-error>
@@ -29,7 +30,7 @@
                 </mat-form-field>
                 <mat-form-field>
                     <input type="password" matInput formControlName="confirmPassword" placeholder="Confirm password"
-                        required />
+                        required autocomplete="new-password" />
                     <mat-error *ngIf="signUpForm.get('confirmPassword').hasError('required')">
                         <span>Confirmation is required</span>
                     </mat-error>

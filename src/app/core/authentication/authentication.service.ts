@@ -4,7 +4,7 @@ import { Observable, of } from 'rxjs';
 import { Credentials, CredentialsService } from './credentials.service';
 
 export interface LoginContext {
-    username: string;
+    email: string;
     password: string;
     remember?: boolean;
 }
@@ -16,7 +16,7 @@ export interface SignUpContext {
 }
 
 export interface RenewPasswordContext {
-    username: string;
+    email: string;
 }
 
 /**
@@ -35,7 +35,8 @@ export class AuthenticationService {
     login(context: LoginContext): Observable<Credentials> {
         // Replace by proper authentication call
         const data = {
-            username: context.username,
+            email: context.email,
+            username: 'usernamePlaceholder',
             token: '123456'
         };
         this.credentialsService.setCredentials(data, context.remember);

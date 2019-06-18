@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit, OnDestroy {
             )
             .subscribe(
                 credentials => {
-                    log.debug(`${credentials.username} successfully logged in`);
+                    log.debug(`${credentials.email} successfully logged in`);
                     this.router.navigate([this.route.snapshot.queryParams.redirect || '/'], { replaceUrl: true });
                 },
                 error => {
@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
     private createForm() {
         this.loginForm = this.formBuilder.group({
-            username: ['', Validators.required],
+            email: ['', Validators.required],
             password: ['', Validators.required],
             remember: true
         });

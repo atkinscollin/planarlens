@@ -37,8 +37,13 @@ export class SignUpComponent implements OnInit {
             )
             .subscribe(
                 () => {
-                    log.debug(`Sign up successful`);
-                    this.router.navigate(['/'], { replaceUrl: true });
+                    const email = this.signUpForm.get('email').value;
+                    log.debug(`${email} successfully signed up`);
+                    this.router.navigate(['/login'], {
+                        replaceUrl: true,
+                        queryParamsHandling: 'merge',
+                        queryParams: { email: email }
+                    });
                 },
                 error => {
                     log.debug(`Sign up error: ${error}`);

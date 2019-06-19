@@ -26,6 +26,10 @@ export class HeaderComponent implements OnInit {
         this.authenticationService.logout().subscribe(() => this.router.navigate(['/login'], { replaceUrl: true }));
     }
 
+    get currentUrl(): string {
+        return this.router.routerState.snapshot.url;
+    }
+
     get isLoggedIn(): boolean {
         return this.credentialsService.isAuthenticated();
     }

@@ -34,7 +34,8 @@
         <br />
         <div fxLayout="column">
             <span>Don't have an account yet?
-                <button mat-stroked-button color="primary" routerLink="/sign-up">
+                <button mat-stroked-button color="primary" routerLink="/sign-up" routerLinkActive
+                    queryParamsHandling="preserve">
                     <span>Sign Up</span>
                 </button>
             </span>
@@ -42,7 +43,8 @@
         <br />
         <div fxLayout="column">
             <span>Having trouble logging in?
-                <button mat-stroked-button color="primary" routerLink="/reset-password">
+                <button mat-stroked-button color="primary" routerLink="/reset-password" routerLinkActive
+                    queryParamsHandling="preserve">
                     <span>Reset password</span>
                 </button>
             </span>

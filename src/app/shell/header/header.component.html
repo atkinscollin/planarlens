@@ -26,10 +26,11 @@
             </button>
         </ng-template>
         <ng-template #notLoggedInMenu>
-            <button mat-menu-item routerLink="/login" routerLinkActive="active">
+            <button mat-menu-item routerLink="/login" routerLinkActive="active" [queryParams]="{redirect: currentUrl}">
                 <mat-icon>exit_to_app</mat-icon>Login
             </button>
-            <button mat-menu-item routerLink="/sign-up" routerLinkActive="active">
+            <button mat-menu-item routerLink="/sign-up" routerLinkActive="active"
+                [queryParams]="{redirect: currentUrl}">
                 <mat-icon>perm_identity</mat-icon>Sign Up
             </button>
         </ng-template>

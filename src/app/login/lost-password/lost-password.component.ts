@@ -37,11 +37,16 @@ export class LostPasswordComponent implements OnInit {
             )
             .subscribe(
                 () => {
-                    log.debug(`Password reset`);
-                    this.router.navigate(['/'], { replaceUrl: true });
+                    const email = this.renewPasswordForm.get('email').value;
+                    log.debug(`${email} successfully renewed their password`);
+                    this.router.navigate(['/login'], {
+                        replaceUrl: true,
+                        queryParamsHandling: 'merge',
+                        queryParams: { email: email }
+                    });
                 },
                 error => {
-                    log.debug(`Password reset failed with error: ${error}`);
+                    log.debug(`Password renew error: ${error}`);
                     this.error = error;
                 }
             );
@@ -49,7 +54,7 @@ export class LostPasswordComponent implements OnInit {
 
     private createForm() {
         this.renewPasswordForm = this.formBuilder.group({
-            email: ['', Validators.required]
+            email: ['', [Validators.required, Validators.email]]
         });
     }
 }

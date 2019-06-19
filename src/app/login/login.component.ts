@@ -26,7 +26,12 @@ export class LoginComponent implements OnInit, OnDestroy {
         this.createForm();
     }
 
-    ngOnInit() {}
+    ngOnInit() {
+        const email: string | null = this.route.snapshot.queryParams.email;
+        if (email) {
+            this.loginForm.get('email').setValue(email);
+        }
+    }
 
     ngOnDestroy() {}
 

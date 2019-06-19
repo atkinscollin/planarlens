@@ -126,9 +126,6 @@ MIT
 @angular/service-worker
 MIT
 
-@ngx-translate/core
-MIT
-
 hammerjs
 MIT
 The MIT License (MIT)

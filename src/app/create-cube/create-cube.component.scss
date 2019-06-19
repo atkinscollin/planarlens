@@ -4,15 +4,15 @@
     display: inline-block;
 }
 
-.sign-up-container,
+.create-cube-container,
 .mat-form-field {
     width: 100%;
 }
 
-.sign-up-container {
+.create-cube-container {
     margin: 1.5rem 0;
 }
 
-.sign-up-error {
+.create-cube-error {
     color: mat-color($app-warn);
 }

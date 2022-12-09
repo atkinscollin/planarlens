@@ -50,7 +50,7 @@
     "@types/jasmine": "^3.3.8",
     "@types/jasminewd2": "^2.0.3",
     "@types/node": "^8.10.13",
-    "angular-cli-ghpages": "^0.5.3",
+    "angular-cli-ghpages": "^1.0.5",
     "codelyzer": "^5.0.0",
     "hads": "^1.7.0",
     "htmlhint": "^0.11.0",
